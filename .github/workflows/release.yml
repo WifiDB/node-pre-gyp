@@ -2,7 +2,7 @@ name: release
 
 on:
   push:
-    branches: [master]
+    branches: [test_release_2_12-2-2024]
   workflow_dispatch:
 
 jobs:
