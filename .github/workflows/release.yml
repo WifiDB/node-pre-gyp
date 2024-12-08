@@ -88,18 +88,3 @@ jobs:
           draft: false
           prerelease: ${{ steps.prepare_release.outputs.prerelease }}
 
-      - name: Publish to NPM (release)
-        if: ${{ steps.prepare_release.outputs.prerelease == 'false' }}
-        run: |
-          npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
-          npm publish --access public
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Publish to NPM (prerelease)
-        if: ${{ steps.prepare_release.outputs.prerelease == 'true' }}
-        run: |
-          npm config set //registry.npmjs.org/:_authToken "${NPM_TOKEN}"
-          npm publish --tag next --access public
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
