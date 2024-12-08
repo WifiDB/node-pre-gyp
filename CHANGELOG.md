@@ -6,6 +6,7 @@
 - Upgraded to https-proxy-agent 7.0.5, nopt 8.0.0, semver 7.5.3, and tar 7.4.0
 - Replaced npmlog with consola
 - Removed rimraf and make-dir as dependencies
+- test
 
 ## 1.0.11
 - Fixes dependabot alert [CVE-2021-44906](https://nvd.nist.gov/vuln/detail/CVE-2021-44906)
